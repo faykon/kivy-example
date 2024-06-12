@@ -1,0 +1,113 @@
+WidgetsExample:
+<WidgetsExample>:
+    cols:3
+    ToggleButton:
+        text:"toggle"
+        on_state:root.on_toggle_button(self)
+    Button:
+        text:"click here"
+        on_press:root.on_button_click()
+        
+    Label:
+        #text:"Hello"
+        text:root.my_text
+    Button:
+        text:"score"
+        on_press:root.scoring()
+    Label:
+        text:root.my_score
+    
+<ScrollViewExample>:
+    StackLayoutExample:
+        size_hint:1,None
+        height:4000
+<StackLayoutExample>:
+    #by default they are stack from left-right and top-bottom
+    orientation:"lr-bt"
+    Button:
+        text:"a"
+        size_hint:.4,.4
+    Button:
+        text:"b"
+        size_hint:.2,.2
+    Button:
+        text:"c"
+        size_hint:.2,.2
+    Button:
+        text:"d"
+        size_hint:.2,.2
+    Button:
+        text:"e"
+        size_hint:.2,.2
+    Button:
+        text:"f"
+        size_hint:.2,.2
+    
+    #we have 6 buttons 5*20=100 opote to allo button paei apo katw
+<GridLayoutExample>:
+#it needs to define first rows and cols
+    cols:2
+    rows:3
+    Button:
+        text:"A"
+        size_hint:None,.8
+        width:"20dp"
+    Button:
+        text:"B"
+        size_hint:.4,.8
+        width:"20dp"
+    Button:
+        text:"C"
+        size_hint:None,.2
+        width:"20dp"
+    BoxLayout:
+        orientation:"vertical"
+        size_hint:.2,.2
+        Button:
+            text:"a"
+        Button:
+            text:"b"   
+
+<AnchorExampleLayout>:
+    #right,left,center for anchor_x
+    #bottom,top,center for anchor_y
+    anchor_x:"center"
+    anchor_y:"top"
+    BoxLayout:
+        orientation:"vertical"
+        size_hint:.2,.2
+        Button:
+            text:"a"
+        Button:
+            text:"b"
+
+
+
+<BoxLayoutExample>: 
+    orientation:"horizontal"
+    Button:
+        text: "hello"
+        size_hint:None,None
+        size:"40dp","40dp"
+        pos_hint: {"x": 0, "y": 0}
+
+        color:0,0,1,1
+    Button:
+        text: "hello1"
+        size_hint:None,None
+        size:"40dp","40dp"
+        pos_hint: {"x": 0, "y": 0}
+        
+        color:0,0,1,1
+    BoxLayout:
+        orientation:"vertical"
+        Button:
+            text:"a"
+            color:1,0,0,1
+        Button:
+            text:"b"
+            color:0,1,0,1
+        Button:
+            text:"c"
+
+
